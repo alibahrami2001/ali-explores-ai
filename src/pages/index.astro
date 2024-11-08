@@ -1,0 +1,94 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Ali Bahrami - AI & Python Developer">
+	<main>
+		<div class="profile-header">
+			<h1>Ali Bahrami</h1>
+			<p class="subtitle">AI & Python Developer</p>
+		</div>
+
+		<div class="bio">
+			<p>
+				Welcome to my personal blog where I share my experiences and insights about
+				Artificial Intelligence and Python development.
+			</p>
+		</div>
+
+		<h2 class="section-title">Latest Blog Posts</h2>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="/blog/getting-started-with-ai"
+				title="Getting Started with AI"
+				body="An introduction to artificial intelligence and its fundamental concepts."
+			/>
+			<Card
+				href="/blog/python-best-practices"
+				title="Python Best Practices"
+				body="Essential tips and tricks for writing clean, efficient Python code."
+			/>
+			<Card
+				href="/blog/machine-learning-journey"
+				title="My Machine Learning Journey"
+				body="Personal experiences and lessons learned in the field of machine learning."
+			/>
+			<Card
+				href="/blog/ai-tools"
+				title="Essential AI Tools"
+				body="A curated list of tools and frameworks for AI development."
+			/>
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.profile-header {
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+	h1 {
+		font-size: 3.5rem;
+		font-weight: 700;
+		line-height: 1;
+		margin-bottom: 0.5em;
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.subtitle {
+		font-size: 1.5rem;
+		color: rgb(var(--accent-light));
+		margin-bottom: 1rem;
+	}
+	.bio {
+		margin-bottom: 3rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.section-title {
+		font-size: 2rem;
+		color: rgb(var(--accent-light));
+		margin-bottom: 1.5rem;
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>
